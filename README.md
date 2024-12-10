@@ -69,7 +69,7 @@ This is my personal Neovim configuration, utilizing **Lazy.nvim** as the package
    If you want to switch color schemes, change it in the configuration file:
 
    ```vim
-   colorscheme rose-pine
+   :colorscheme rose-pine
    ```
 
    You can switch to `tokyonight` by replacing `rose-pine` with `tokyonight`.
