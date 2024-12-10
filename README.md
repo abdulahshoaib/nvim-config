@@ -53,7 +53,7 @@ This is my personal Neovim configuration, utilizing **Lazy.nvim** as the package
    Clone your configuration into `~/.config/nvim/` (or wherever your Neovim configuration is located).
 
    ```bash
-   git clone https://github.com/yourusername/neovim-config ~/.config/nvim
+   git clone https://github.com/WhoisCipher/neovim-config ~/.config/nvim
    ```
 
 4. **Install Plugins**:
