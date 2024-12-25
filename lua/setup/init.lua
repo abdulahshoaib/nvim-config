@@ -8,6 +8,8 @@ local cipherGroup = augroup('Abdullah', {})
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
 
+
+
 autocmd({ "BufWritePre" }, {
     group = cipherGroup,
     pattern = "*",
