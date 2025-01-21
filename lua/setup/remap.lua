@@ -5,6 +5,8 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 
+vim.keymap.set({ "n", "v" }, "<C-_>", ":message<CR>")
+
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
@@ -17,10 +19,13 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
+-- remap for asp .net development
+vim.keymap.set("n", "<leader>cc", ":w<CR>:!dotnet build -o bin<CR>")
+vim.keymap.set("n", "<leader>cr", ":w<CR>:!dotnet run<CR>")
+
 -- This is my personal setup for debugging and running assembly asm format files
 -- using: i3wm & xdotool for echoing keyboard keys
 -- compiles locally and then runs .com files on dosbox
-
 
 vim.keymap.set("n", "<leader>d", function()
     if vim.bo.filetype == "asm" then
