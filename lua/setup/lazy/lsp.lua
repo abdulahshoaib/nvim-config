@@ -9,6 +9,8 @@ return {
         "hrsh7th/cmp-path",
         "saadparwaiz1/cmp_luasnip",
         "L3MON4D3/LuaSnip",
+        "rafamadriz/friendly-snippets",
+        "honza/vim-snippets",
     },
 
     config = function()
@@ -26,6 +28,8 @@ return {
                 end
             }
         })
+
+        require("luasnip.loaders.from_vscode").lazy_load()
 
         local cmp = require('cmp')
         cmp.setup({

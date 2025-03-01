@@ -1,5 +1,11 @@
 return {
     {
+        'Skardyy/makurai-nvim',
+        config = function()
+            vim.cmd('colorscheme makurai')
+        end
+    },
+    {
         'folke/tokyonight.nvim',
         config = function()
             require('tokyonight').setup({
@@ -16,9 +22,6 @@ return {
 
     {
         'rose-pine/neovim',
-        name   = 'rose-pine',
-        config = function()
-            vim.cmd('       colorscheme rose-pine')
-        end
+        name = 'rose-pine',
     }
 }
