@@ -9,12 +9,14 @@ This is my personal Neovim configuration, utilizing **Lazy.nvim** as the package
 - **Telescope**: A fuzzy finder to quickly search for files, buffers, and other resources.
 - **Harpoon**: Quick file navigation to jump between frequently used files.
 - **Tree-sitter**: Provides syntax highlighting and better code understanding with intelligent parsing.
+- **Cloak**: Censor's the contents of .env file
 
 ## Plugins
 
 ### UI & Navigation
 - **[Telescope](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder for files, buffers, and more.
 - **[lualine](https://github.com/nvim-lualine/lualine.nvim)**: A statusline plugin to display essential information.
+- **[cloak](https://github.com/laytan/cloak.nvim)**: Hides the environment variables.
 
 ### Git Integration
 - **[vim-fugitive](https://github.com/tpope/vim-fugitive)**: Git commands directly in Neovim.
