@@ -21,7 +21,7 @@
 - [Customization](#customization)
 
 
-## Features
+# Features
 
 - **LSP & Autocompletion**: Powered by `lspconfig`, `nvim-cmp`, and `LuaSnip` for intelligent code completion and navigation.
 - **Git Integration**: With `fugitive` you have seamless git support directly in Neovim.
@@ -30,38 +30,38 @@
 - **Tree-sitter**: Provides syntax highlighting and better code understanding with intelligent parsing.
 - **Cloak**: Censor's the contents of .env file
 
-## Plugins
+# Plugins
 
-### UI & Navigation
+## UI & Navigation
 - **[Telescope](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder for files, buffers, and more.
 - **[lualine](https://github.com/nvim-lualine/lualine.nvim)**: A statusline plugin to display essential information.
 - **[cloak](https://github.com/laytan/cloak.nvim)**: Hides the environment variables.
 
-### Git Integration
+## Git Integration
 - **[vim-fugitive](https://github.com/tpope/vim-fugitive)**: Git commands directly in Neovim.
 
-### Language Server Protocol (LSP)
+## Language Server Protocol (LSP)
 - **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: Collection of LSP configurations for various languages.
 - **[mason.nvim](https://github.com/williamboman/mason.nvim)**: Handles installing and managing LSP servers, linters, and formatters.
 
-### Autocompletion
+## Autocompletion
 - **[nvim-cmp](https://github.com/hrsh7th/nvim-cmp)**: Autocompletion plugin for Neovim.
 - **[cmp-buffer](https://github.com/hrsh7th/cmp-buffer)**: Buffer completion source for `nvim-cmp`.
 - **[cmp-path](https://github.com/hrsh7th/cmp-path)**: Path completion source for `nvim-cmp`.
 - **[cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)**: LuaSnip completion source for `nvim-cmp`.
 - **[LuaSnip](https://github.com/L3MON4D3/LuaSnip)**: Snippet engine for Neovim.
 
-### Syntax Highlighting
+## Syntax Highlighting
 - **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Syntax highlighting and better parsing for many languages.
 
-### File Navigation
+## File Navigation
 - **[Harpoon](https://github.com/ThePrimeagen/harpoon)**: Easily manage and switch between files.
 
-## Color Schemes
+# Color Schemes
 - **[Rose-Pine](https://github.com/rose-pine/neovim)**: A soft and elegant color scheme.
 - **[Tokyonight](https://github.com/folke/tokyonight.nvim)**: A night-friendly color scheme.
 
-## Installation
+# Installation
 
 1. **Install Neovim** (if you haven't already) via [neovim.io](https://neovim.io/).
 
@@ -95,7 +95,7 @@
 
    You can switch to `tokyonight` by replacing `rose-pine` with `tokyonight`.
 
-## Usage
+# Usage
 
 - **Telescope**: Press `<leader>pf` to find files, `<leader>ps` to search for words in files, and `<C-p>` for git-files.
 - **LSP**: Autocompletion and diagnostics should work out of the box when you open a file.
@@ -105,6 +105,6 @@
     - Press `<leader>h`, `<leader>t`, `<leader>s` & `<leader>n` between files 1-4 marked respectively.
     - Press `<leader>e` to open GUI for marked files.
 
-## Customization
+# Customization
 
 The remaps are all done according to my work-flow under the [remaps](lua/setup/remap.lua). Make sure that you change this to your own personal preference as the vim experience has to be all but personalized. Welcome to the vim cult.
