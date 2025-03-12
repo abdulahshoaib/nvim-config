@@ -77,7 +77,6 @@ vim.keymap.set("n", "<leader>r", function()
         local filename = vim.fn.expand("%:t:r")
         vim.fn.system("gcc " .. filepath .. ".c -o " .. filename)
         vim.cmd("!./" .. filename)
-
     elseif filetype == "asm" then
         -- Compile and run Assembly program (DOS)
         local asm_file = vim.fn.expand("%:p")

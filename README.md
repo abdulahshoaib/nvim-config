@@ -1,4 +1,7 @@
-# Neovim Config
+ <div align= "center">
+    <h1>𝗡𝗲𝗼𝘃𝗶𝗺 𝗖𝗼𝗻𝗳𝗶𝗴</h1>
+    <imp src="https://img.shields.io/badge/Nvim-130445?style=flat&logo=neovim" />
+ </div>
 
 This is my personal Neovim configuration, utilizing **Lazy.nvim** as the package manager.
 
