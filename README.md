@@ -1,14 +1,12 @@
  <div align= "center">
     <h1>𝗡𝗲𝗼𝘃𝗶𝗺 𝗖𝗼𝗻𝗳𝗶𝗴</h1>
     <p><em>My personal Neovim configuration with <strong>Lazy.nvim</strong> as the package manager.</em></p>
-
     <p>
         <img src="https://img.shields.io/badge/Nvim-130445?style=flat&logo=neovim" />
         <img src="https://img.shields.io/badge/Lua-0b9fbd?style=flat&logo=lua&logoColor=6B6BB3" />
     </p>
-
-    <hr>
 </div>
+
 # Table of Contents
 
 - [Features](#features)
