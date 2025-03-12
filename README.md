@@ -5,6 +5,21 @@
     <p style="font-family: sans-serif;">This is my personal Neovim configuration, utilizing <strong>Lazy.nvim</strong> as the package manager.</p>
  </div>
 
+# Table of Contents
+
+- [Features](#features)
+- [Plugins](#plugins)
+  - [UI & Navigation](#ui--navigation)
+  - [Git Integration](#git-integration)
+  - [Language Server Protocol (LSP)](#language-server-protocol-lsp)
+  - [Autocompletion](#autocompletion)
+  - [Syntax Highlighting](#syntax-highlighting)
+  - [File Navigation](#file-navigation)
+- [Color Schemes](#color-schemes)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Customization](#customization)
+
 
 ## Features
 
