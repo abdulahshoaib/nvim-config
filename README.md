@@ -21,6 +21,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Customization](#customization)
+- [Installation](#installation)
 
 
 # Features
@@ -110,3 +111,14 @@
 # Customization
 
 The remaps are all done according to my work-flow under the [remaps](lua/setup/remap.lua). Make sure that you change this to your own personal preference as the vim experience has to be all but personalized. Welcome to the vim cult.
+
+## Installation
+
+<details>
+<summary><strong>Click to expand</strong> 📦</summary>
+
+1. **Install Neovim** → [neovim.io](https://neovim.io/)
+2. **Install Lazy.nvim** → [Lazy.nvim Installation](https://github.com/folke/lazy.nvim)
+3. **Clone the repository**:
+   ```bash
+   git clone https://github.com/WhoisCipher/nvim-config ~/.config/nvim
