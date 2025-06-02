@@ -1,12 +1,17 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
+        -- mason
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
+
+        -- autocomplete
         "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
+
+        -- snippets
         "saadparwaiz1/cmp_luasnip",
         "L3MON4D3/LuaSnip",
         "rafamadriz/friendly-snippets",
