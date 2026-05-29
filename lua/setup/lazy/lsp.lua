@@ -1,59 +1,65 @@
 return {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-        -- mason
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
+	"neovim/nvim-lspconfig",
+	dependencies = {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
 
-        -- autocomplete
-        "hrsh7th/nvim-cmp",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
+		"hrsh7th/nvim-cmp",
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
 
-        -- snippets
-        "saadparwaiz1/cmp_luasnip",
-        "L3MON4D3/LuaSnip",
-        "rafamadriz/friendly-snippets",
-        "honza/vim-snippets",
-    },
+		"saadparwaiz1/cmp_luasnip",
+		"L3MON4D3/LuaSnip",
+		"rafamadriz/friendly-snippets",
+		"honza/vim-snippets",
+	},
 
-    config = function()
-        require('mason').setup()
-        require("mason-lspconfig").setup({
-            ensure_installed = {
-                "lua_ls",
-                "rust_analyzer",
-                "clangd"
-            },
+	config = function()
+		require("mason").setup()
 
-            handlers = {
-                function(server_name)
-                    require("lspconfig")[server_name].setup {}
-                end
-            }
-        })
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		local servers = {
+			"lua_ls",
+			"rust_analyzer",
+			"ts_ls",
+			"gopls",
+			"clangd",
+			"tailwindcss",
+			"sqls",
+		}
 
-        require("luasnip.loaders.from_vscode").lazy_load()
+		for _, server in ipairs(servers) do
+			vim.lsp.config(server, {
+				capabilities = capabilities,
+			})
+		end
 
-        local cmp = require('cmp')
-        cmp.setup({
-            snippet = {
-                expand = function(args)
-                    require('luasnip').lsp_expand(args.body)
-                end,
-            },
-            mapping = cmp.mapping.preset.insert({
-                ['<C-s>'] = cmp.mapping.select_next_item(),
-                ['<C-w>'] = cmp.mapping.select_prev_item(),
-                ['<CR>'] = cmp.mapping.confirm({ select = true }),
-            }),
-            sources = {
-                { name = 'nvim_lsp' },
-                { name = 'buffer' },
-                { name = 'path' },
-                { name = 'luasnip' },
-            },
-        })
-    end
+		require("mason-lspconfig").setup({
+			ensure_installed = servers,
+			automatic_enable = servers,
+		})
+
+		require("luasnip.loaders.from_vscode").lazy_load()
+
+		local cmp = require("cmp")
+		cmp.setup({
+			snippet = {
+				expand = function(args)
+					require("luasnip").lsp_expand(args.body)
+				end,
+			},
+			mapping = cmp.mapping.preset.insert({
+				["<C-s>"] = cmp.mapping.select_next_item(),
+				["<C-w>"] = cmp.mapping.select_prev_item(),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
+			}),
+			sources = {
+				{ name = "nvim_lsp" },
+				{ name = "buffer" },
+				{ name = "path" },
+				{ name = "luasnip" },
+			},
+		})
+	end
 }

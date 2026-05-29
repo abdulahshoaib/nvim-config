@@ -1,0 +1,13 @@
+# Local agent metadata
+.agents/
+.codex/
+
+# Neovim local state/logs
+*.log
+*.shada
+*.swp
+*.swo
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
