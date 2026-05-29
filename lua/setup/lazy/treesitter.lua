@@ -21,26 +21,6 @@ return {
 
 		require("nvim-treesitter").install(languages)
 
-		local parsers = require("nvim-treesitter.parsers")
-		parsers.ft_to_lang = vim.treesitter.language.get_lang
-		parsers.get_parser = function(bufnr, lang)
-			return vim.treesitter.get_parser(bufnr, lang)
-		end
-
-		package.loaded["nvim-treesitter.configs"] = {
-			is_enabled = function(module)
-				return module == "highlight"
-			end,
-			get_module = function(module)
-				if module == "highlight" then
-					return {
-						additional_vim_regex_highlighting = false,
-					}
-				end
-				return {}
-			end,
-		}
-
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = {
 				"c",
